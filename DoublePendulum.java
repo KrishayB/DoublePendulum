@@ -61,6 +61,8 @@ class PendulumPanel extends JPanel implements ActionListener {
 
     private Timer drawTimer; // A timer that is used to draw each frame
 
+    private JButton pauseResume;
+
     public PendulumPanel() {
         setBackground(Color.BLACK);
         drawTimer = new Timer(15, this);
@@ -216,15 +218,10 @@ class PendulumPanel extends JPanel implements ActionListener {
             resetPendulum.addActionListener(buttonsListener);
             add(resetPendulum);
 
-            // Button to pause
-            JButton pause = new JButton("Pause");
-            pause.addActionListener(buttonsListener);
-            add(pause);
-
-            // Button to resume
-            JButton resume = new JButton("Resume");
-            resume.addActionListener(buttonsListener);
-            add(resume);
+            // Button to pause/resume
+            pauseResume = new JButton("Pause");
+            pauseResume.addActionListener(buttonsListener);
+            add(pauseResume);
         }
     
         // This method makes a JSlider based on certain parameters.
@@ -313,8 +310,10 @@ class PendulumPanel extends JPanel implements ActionListener {
                     gravSlider.setValue(1);
                 } else if (button.equalsIgnoreCase("Pause")) {
                     drawTimer.stop();
+                    pauseResume.setText("Resume");
                 } else if (button.equalsIgnoreCase("Resume")) {
                     drawTimer.start();
+                    pauseResume.setText("Pause");
                 }
             }
         }
