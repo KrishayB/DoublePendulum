@@ -5,6 +5,6 @@ This program simulates a double pendulum using Java. On the right, there are con
 
 ### Running the program:
 1. Clone the repository, download the code, or copy/paste it into a .java file.
-2. Compile and run or use an editor that has a built-in compiler like [VS Code](https://code.visualstudio.com/).
+2. Compile and run `DoublePendulum.java` inside the `DoublePendulum` directory.
 
 ![Example](https://raw.githubusercontent.com/Somewans/DoublePendulum/main/Example.png?token=GHSAT0AAAAAABTFXIONLYFLUBVQZOOEAYKAYTFY77Q)
